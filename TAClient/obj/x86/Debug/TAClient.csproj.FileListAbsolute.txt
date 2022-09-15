@@ -1,0 +1,31 @@
+D:/temp/TAClient/bin/Debug/TAClient.exe.config
+D:/temp/TAClient/bin/Debug/TAClient.exe
+D:/temp/TAClient/bin/Debug/TAClient.pdb
+D:/temp/TAClient/obj/x86/Debug/ResolveAssemblyReference.cache
+D:/temp/TAClient/obj/x86/Debug/TAClient.mainForm.resources
+D:/temp/TAClient/obj/x86/Debug/TAClient.Properties.Resources.resources
+D:/temp/TAClient/obj/x86/Debug/TAClient.reportForm.resources
+D:/temp/TAClient/obj/x86/Debug/GenerateResource.read.1.tlog
+D:/temp/TAClient/obj/x86/Debug/GenerateResource.write.1.tlog
+D:/temp/TAClient/obj/x86/Debug/RdlCompile.cache
+D:/temp/TAClient/obj/x86/Debug/RdlCompile.compiled
+D:/temp/TAClient/obj/x86/Debug/TAClient.exe
+D:/temp/TAClient/obj/x86/Debug/TAClient.pdb
+D:/temp/007/TAClient/bin/Debug/TAClient.exe.config
+D:/temp/007/TAClient/bin/Debug/TAClient.exe
+D:/temp/007/TAClient/bin/Debug/TAClient.pdb
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.csprojAssemblyReference.cache
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.mainForm.resources
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.Properties.Resources.resources
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.reportForm.resources
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.csproj.GenerateResource.cache
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.exe
+D:/temp/007/TAClient/obj/x86/Debug/TAClient.pdb
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.csproj.AssemblyReference.cache
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.mainForm.resources
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.Properties.Resources.resources
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.reportForm.resources
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.csproj.GenerateResource.cache
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.csproj.CoreCompileInputs.cache
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.exe
+/Users/SIVIRGGG/Documents/Вся информация/Моя информация/!!!!БГУИР/6 Семестр/Курсовая/СТПИС/проект/TAClient/obj/x86/Debug/TAClient.pdb

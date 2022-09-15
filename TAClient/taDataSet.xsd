@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="taDataSet" targetNamespace="http://tempuri.org/taDataSet.xsd" xmlns:mstns="http://tempuri.org/taDataSet.xsd" xmlns="http://tempuri.org/taDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="taDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="taDataSet" msprop:Generator_UserDSName="taDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SalePlan" msprop:Generator_TableClassName="SalePlanDataTable" msprop:Generator_TableVarName="tableSalePlan" msprop:Generator_TablePropName="SalePlan" msprop:Generator_RowDeletingName="SalePlanRowDeleting" msprop:Generator_RowChangingName="SalePlanRowChanging" msprop:Generator_RowEvHandlerName="SalePlanRowChangeEventHandler" msprop:Generator_RowDeletedName="SalePlanRowDeleted" msprop:Generator_UserTableName="SalePlan" msprop:Generator_RowChangedName="SalePlanRowChanged" msprop:Generator_RowEvArgName="SalePlanRowChangeEvent" msprop:Generator_RowClassName="SalePlanRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="dateMonth" msprop:Generator_ColumnVarNameInTable="columndateMonth" msprop:Generator_ColumnPropNameInRow="dateMonth" msprop:Generator_ColumnPropNameInTable="dateMonthColumn" msprop:Generator_UserColumnName="dateMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="factSumma" msprop:Generator_ColumnVarNameInTable="columnfactSumma" msprop:Generator_ColumnPropNameInRow="factSumma" msprop:Generator_ColumnPropNameInTable="factSummaColumn" msprop:Generator_UserColumnName="factSumma" type="xs:decimal" minOccurs="0" />
+              <xs:element name="planSumma" msprop:Generator_ColumnVarNameInTable="columnplanSumma" msprop:Generator_ColumnPropNameInRow="planSumma" msprop:Generator_ColumnPropNameInTable="planSummaColumn" msprop:Generator_UserColumnName="planSumma" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vvp" msprop:Generator_ColumnVarNameInTable="columnvvp" msprop:Generator_ColumnPropNameInRow="vvp" msprop:Generator_ColumnPropNameInTable="vvpColumn" msprop:Generator_UserColumnName="vvp" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AvgPriceYear" msprop:Generator_TableClassName="AvgPriceYearDataTable" msprop:Generator_TableVarName="tableAvgPriceYear" msprop:Generator_RowChangedName="AvgPriceYearRowChanged" msprop:Generator_TablePropName="AvgPriceYear" msprop:Generator_RowDeletingName="AvgPriceYearRowDeleting" msprop:Generator_RowChangingName="AvgPriceYearRowChanging" msprop:Generator_RowEvHandlerName="AvgPriceYearRowChangeEventHandler" msprop:Generator_RowDeletedName="AvgPriceYearRowDeleted" msprop:Generator_RowClassName="AvgPriceYearRow" msprop:Generator_UserTableName="AvgPriceYear" msprop:Generator_RowEvArgName="AvgPriceYearRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="product" msprop:Generator_ColumnVarNameInTable="columnproduct" msprop:Generator_ColumnPropNameInRow="product" msprop:Generator_ColumnPropNameInTable="productColumn" msprop:Generator_UserColumnName="product" type="xs:int" minOccurs="0" />
+              <xs:element name="productName" msprop:Generator_ColumnVarNameInTable="columnproductName" msprop:Generator_ColumnPropNameInRow="productName" msprop:Generator_ColumnPropNameInTable="productNameColumn" msprop:Generator_UserColumnName="productName" type="xs:string" minOccurs="0" />
+              <xs:element name="unitName" msprop:Generator_ColumnVarNameInTable="columnunitName" msprop:Generator_ColumnPropNameInRow="unitName" msprop:Generator_ColumnPropNameInTable="unitNameColumn" msprop:Generator_UserColumnName="unitName" type="xs:string" minOccurs="0" />
+              <xs:element name="avgPrice" msprop:Generator_ColumnVarNameInTable="columnavgPrice" msprop:Generator_ColumnPropNameInRow="avgPrice" msprop:Generator_ColumnPropNameInTable="avgPriceColumn" msprop:Generator_UserColumnName="avgPrice" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RetailSalesYear" msprop:Generator_TableClassName="RetailSalesYearDataTable" msprop:Generator_TableVarName="tableRetailSalesYear" msprop:Generator_RowChangedName="RetailSalesYearRowChanged" msprop:Generator_TablePropName="RetailSalesYear" msprop:Generator_RowDeletingName="RetailSalesYearRowDeleting" msprop:Generator_RowChangingName="RetailSalesYearRowChanging" msprop:Generator_RowEvHandlerName="RetailSalesYearRowChangeEventHandler" msprop:Generator_RowDeletedName="RetailSalesYearRowDeleted" msprop:Generator_RowClassName="RetailSalesYearRow" msprop:Generator_UserTableName="RetailSalesYear" msprop:Generator_RowEvArgName="RetailSalesYearRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="retailName" msprop:Generator_ColumnVarNameInTable="columnretailName" msprop:Generator_ColumnPropNameInRow="retailName" msprop:Generator_ColumnPropNameInTable="retailNameColumn" msprop:Generator_UserColumnName="retailName" type="xs:string" minOccurs="0" />
+              <xs:element name="summaSum" msprop:Generator_ColumnVarNameInTable="columnsummaSum" msprop:Generator_ColumnPropNameInRow="summaSum" msprop:Generator_ColumnPropNameInTable="summaSumColumn" msprop:Generator_UserColumnName="summaSum" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PaymentSalesYear" msprop:Generator_TableClassName="PaymentSalesYearDataTable" msprop:Generator_TableVarName="tablePaymentSalesYear" msprop:Generator_RowChangedName="PaymentSalesYearRowChanged" msprop:Generator_TablePropName="PaymentSalesYear" msprop:Generator_RowDeletingName="PaymentSalesYearRowDeleting" msprop:Generator_RowChangingName="PaymentSalesYearRowChanging" msprop:Generator_RowEvHandlerName="PaymentSalesYearRowChangeEventHandler" msprop:Generator_RowDeletedName="PaymentSalesYearRowDeleted" msprop:Generator_RowClassName="PaymentSalesYearRow" msprop:Generator_UserTableName="PaymentSalesYear" msprop:Generator_RowEvArgName="PaymentSalesYearRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="paymentName" msprop:Generator_ColumnVarNameInTable="columnpaymentName" msprop:Generator_ColumnPropNameInRow="paymentName" msprop:Generator_ColumnPropNameInTable="paymentNameColumn" msprop:Generator_UserColumnName="paymentName" type="xs:string" minOccurs="0" />
+              <xs:element name="summaSum" msprop:Generator_ColumnVarNameInTable="columnsummaSum" msprop:Generator_ColumnPropNameInRow="summaSum" msprop:Generator_ColumnPropNameInTable="summaSumColumn" msprop:Generator_UserColumnName="summaSum" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CategorySalesYear" msprop:Generator_TableClassName="CategorySalesYearDataTable" msprop:Generator_TableVarName="tableCategorySalesYear" msprop:Generator_RowChangedName="CategorySalesYearRowChanged" msprop:Generator_TablePropName="CategorySalesYear" msprop:Generator_RowDeletingName="CategorySalesYearRowDeleting" msprop:Generator_RowChangingName="CategorySalesYearRowChanging" msprop:Generator_RowEvHandlerName="CategorySalesYearRowChangeEventHandler" msprop:Generator_RowDeletedName="CategorySalesYearRowDeleted" msprop:Generator_RowClassName="CategorySalesYearRow" msprop:Generator_UserTableName="CategorySalesYear" msprop:Generator_RowEvArgName="CategorySalesYearRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="categoryName" msprop:Generator_ColumnVarNameInTable="columncategoryName" msprop:Generator_ColumnPropNameInRow="categoryName" msprop:Generator_ColumnPropNameInTable="categoryNameColumn" msprop:Generator_UserColumnName="categoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="summaSum" msprop:Generator_ColumnVarNameInTable="columnsummaSum" msprop:Generator_ColumnPropNameInRow="summaSum" msprop:Generator_ColumnPropNameInTable="summaSumColumn" msprop:Generator_UserColumnName="summaSum" type="xs:decimal" minOccurs="0" />
+              <xs:element name="weight" msprop:Generator_ColumnVarNameInTable="columnweight" msprop:Generator_ColumnPropNameInRow="weight" msprop:Generator_ColumnPropNameInTable="weightColumn" msprop:Generator_UserColumnName="weight" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TradeRhytm" msprop:Generator_TableClassName="TradeRhytmDataTable" msprop:Generator_TableVarName="tableTradeRhytm" msprop:Generator_RowChangedName="TradeRhytmRowChanged" msprop:Generator_TablePropName="TradeRhytm" msprop:Generator_RowDeletingName="TradeRhytmRowDeleting" msprop:Generator_RowChangingName="TradeRhytmRowChanging" msprop:Generator_RowEvHandlerName="TradeRhytmRowChangeEventHandler" msprop:Generator_RowDeletedName="TradeRhytmRowDeleted" msprop:Generator_RowClassName="TradeRhytmRow" msprop:Generator_UserTableName="TradeRhytm" msprop:Generator_RowEvArgName="TradeRhytmRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="dateMonth" msprop:Generator_ColumnVarNameInTable="columndateMonth" msprop:Generator_ColumnPropNameInRow="dateMonth" msprop:Generator_ColumnPropNameInTable="dateMonthColumn" msprop:Generator_UserColumnName="dateMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="baseSumma" msprop:Generator_ColumnVarNameInTable="columnbaseSumma" msprop:Generator_ColumnPropNameInRow="baseSumma" msprop:Generator_ColumnPropNameInTable="baseSummaColumn" msprop:Generator_UserColumnName="baseSumma" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sko" msprop:Generator_ColumnVarNameInTable="columnsko" msprop:Generator_ColumnPropNameInRow="sko" msprop:Generator_ColumnPropNameInTable="skoColumn" msprop:Generator_UserColumnName="sko" type="xs:decimal" minOccurs="0" />
+              <xs:element name="kvar" msprop:Generator_ColumnVarNameInTable="columnkvar" msprop:Generator_ColumnPropNameInRow="kvar" msprop:Generator_ColumnPropNameInTable="kvarColumn" msprop:Generator_UserColumnName="kvar" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TradeSeason" msprop:Generator_TableClassName="TradeSeasonDataTable" msprop:Generator_TableVarName="tableTradeSeason" msprop:Generator_RowChangedName="TradeSeasonRowChanged" msprop:Generator_TablePropName="TradeSeason" msprop:Generator_RowDeletingName="TradeSeasonRowDeleting" msprop:Generator_RowChangingName="TradeSeasonRowChanging" msprop:Generator_RowEvHandlerName="TradeSeasonRowChangeEventHandler" msprop:Generator_RowDeletedName="TradeSeasonRowDeleted" msprop:Generator_RowClassName="TradeSeasonRow" msprop:Generator_UserTableName="TradeSeason" msprop:Generator_RowEvArgName="TradeSeasonRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="dateQuarter" msprop:Generator_ColumnVarNameInTable="columndateQuarter" msprop:Generator_ColumnPropNameInRow="dateQuarter" msprop:Generator_ColumnPropNameInTable="dateQuarterColumn" msprop:Generator_UserColumnName="dateQuarter" type="xs:int" minOccurs="0" />
+              <xs:element name="baseSumma" msprop:Generator_ColumnVarNameInTable="columnbaseSumma" msprop:Generator_ColumnPropNameInRow="baseSumma" msprop:Generator_ColumnPropNameInTable="baseSummaColumn" msprop:Generator_UserColumnName="baseSumma" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trade" msprop:Generator_TableClassName="TradeDataTable" msprop:Generator_TableVarName="tableTrade" msprop:Generator_RowChangedName="TradeRowChanged" msprop:Generator_TablePropName="Trade" msprop:Generator_RowDeletingName="TradeRowDeleting" msprop:Generator_RowChangingName="TradeRowChanging" msprop:Generator_RowEvHandlerName="TradeRowChangeEventHandler" msprop:Generator_RowDeletedName="TradeRowDeleted" msprop:Generator_RowClassName="TradeRow" msprop:Generator_UserTableName="Trade" msprop:Generator_RowEvArgName="TradeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateYear" msprop:Generator_ColumnVarNameInTable="columndateYear" msprop:Generator_ColumnPropNameInRow="dateYear" msprop:Generator_ColumnPropNameInTable="dateYearColumn" msprop:Generator_UserColumnName="dateYear" type="xs:int" minOccurs="0" />
+              <xs:element name="dateMonth" msprop:Generator_ColumnVarNameInTable="columndateMonth" msprop:Generator_ColumnPropNameInRow="dateMonth" msprop:Generator_ColumnPropNameInTable="dateMonthColumn" msprop:Generator_UserColumnName="dateMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="factSumma" msprop:Generator_ColumnVarNameInTable="columnfactSumma" msprop:Generator_ColumnPropNameInRow="factSumma" msprop:Generator_ColumnPropNameInTable="factSummaColumn" msprop:Generator_UserColumnName="factSumma" type="xs:decimal" minOccurs="0" />
+              <xs:element name="indexPrice" msprop:Generator_ColumnVarNameInTable="columnindexPrice" msprop:Generator_ColumnPropNameInRow="indexPrice" msprop:Generator_ColumnPropNameInTable="indexPriceColumn" msprop:Generator_UserColumnName="indexPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="baseSumma" msprop:Generator_ColumnVarNameInTable="columnbaseSumma" msprop:Generator_ColumnPropNameInRow="baseSumma" msprop:Generator_ColumnPropNameInTable="baseSummaColumn" msprop:Generator_UserColumnName="baseSumma" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tr" msprop:Generator_ColumnVarNameInTable="columntr" msprop:Generator_ColumnPropNameInRow="tr" msprop:Generator_ColumnPropNameInTable="trColumn" msprop:Generator_UserColumnName="tr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tp" msprop:Generator_ColumnVarNameInTable="columntp" msprop:Generator_ColumnPropNameInRow="tp" msprop:Generator_ColumnPropNameInTable="tpColumn" msprop:Generator_UserColumnName="tp" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

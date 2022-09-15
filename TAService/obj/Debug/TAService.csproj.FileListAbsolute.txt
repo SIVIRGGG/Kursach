@@ -1,0 +1,11 @@
+D:\temp\TAService\bin\TAService.dll
+D:\temp\TAService\bin\TAService.pdb
+D:\temp\TAService\obj\Debug\ResolveAssemblyReference.cache
+D:\temp\TAService\obj\Debug\TAService.dll
+D:\temp\TAService\obj\Debug\TAService.pdb
+D:\temp\007\TAService\bin\TAService.dll.config
+D:\temp\007\TAService\bin\TAService.dll
+D:\temp\007\TAService\bin\TAService.pdb
+D:\temp\007\TAService\obj\Debug\TAService.dll
+D:\temp\007\TAService\obj\Debug\TAService.pdb
+D:\temp\007\TAService\obj\Debug\TAService.csprojAssemblyReference.cache

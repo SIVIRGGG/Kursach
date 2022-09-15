@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="dbCategoryList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbCategoryListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbCategoryUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbCategoryUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbCategoryUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbCategoryInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbCategoryInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbCategoryInsertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbCategoryDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbCategoryDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbCategoryDeleteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbUnitListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbUnitListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbUnitUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbUnitInsertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbUnitDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbUnitDeleteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbPlanListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbPlanListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="summa" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbPlanUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="summa" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbPlanInsertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPlanDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbPlanDeleteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbProductListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="category" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unit" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbProductUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="category" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unit" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbProductInsertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbProductDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbProductDeleteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbSaleListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbSaleListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dates" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="product" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="summa" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="payment" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="retail" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbSaleUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dates" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="product" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="summa" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="payment" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="retail" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbSaleInsertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbSaleDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbSaleDeleteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbPaymentList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbPaymentListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbPaymentListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbRetailList">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbRetailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbRetailListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYearList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetYearListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetYearListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSalePlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSalePlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSalePlanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradePaymentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeRetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeRetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradeRetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeStructure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeStructureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradeStructureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeRhytm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeRhytmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradeRhytmResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeSeason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeSeasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradeSeasonResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAvgPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAvgPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAvgPriceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="dbCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:dbCategoryUpdate" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:dbCategoryUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:dbCategoryInsert" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:dbCategoryInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:dbCategoryDelete" />
+  </wsdl:message>
+  <wsdl:message name="dbCategoryDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:dbCategoryDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbUnitList" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbUnitListResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:dbUnitUpdate" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:dbUnitUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:dbUnitInsert" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:dbUnitInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:dbUnitDelete" />
+  </wsdl:message>
+  <wsdl:message name="dbUnitDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:dbUnitDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbPlanList" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbPlanListResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:dbPlanUpdate" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:dbPlanUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:dbPlanInsert" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:dbPlanInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:dbPlanDelete" />
+  </wsdl:message>
+  <wsdl:message name="dbPlanDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:dbPlanDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbProductList" />
+  </wsdl:message>
+  <wsdl:message name="dbProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbProductUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:dbProductUpdate" />
+  </wsdl:message>
+  <wsdl:message name="dbProductUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:dbProductUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbProductInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:dbProductInsert" />
+  </wsdl:message>
+  <wsdl:message name="dbProductInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:dbProductInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbProductDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:dbProductDelete" />
+  </wsdl:message>
+  <wsdl:message name="dbProductDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:dbProductDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbSaleList" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbSaleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:dbSaleUpdate" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:dbSaleUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:dbSaleInsert" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:dbSaleInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:dbSaleDelete" />
+  </wsdl:message>
+  <wsdl:message name="dbSaleDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:dbSaleDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbPaymentListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbPaymentList" />
+  </wsdl:message>
+  <wsdl:message name="dbPaymentListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbPaymentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbRetailListSoapIn">
+    <wsdl:part name="parameters" element="tns:dbRetailList" />
+  </wsdl:message>
+  <wsdl:message name="dbRetailListSoapOut">
+    <wsdl:part name="parameters" element="tns:dbRetailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYearListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetYearList" />
+  </wsdl:message>
+  <wsdl:message name="GetYearListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetYearListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSalePlanSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSalePlan" />
+  </wsdl:message>
+  <wsdl:message name="GetSalePlanSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSalePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTrade" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradePayment" />
+  </wsdl:message>
+  <wsdl:message name="GetTradePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeRetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradeRetail" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeRetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradeRetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeStructureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradeStructure" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeStructureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradeStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeRhytmSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradeRhytm" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeRhytmSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradeRhytmResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeSeasonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradeSeason" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeSeasonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradeSeasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAvgPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAvgPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetAvgPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAvgPriceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="taServiceSoap">
+    <wsdl:operation name="dbCategoryList">
+      <wsdl:input message="tns:dbCategoryListSoapIn" />
+      <wsdl:output message="tns:dbCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryUpdate">
+      <wsdl:input message="tns:dbCategoryUpdateSoapIn" />
+      <wsdl:output message="tns:dbCategoryUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryInsert">
+      <wsdl:input message="tns:dbCategoryInsertSoapIn" />
+      <wsdl:output message="tns:dbCategoryInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryDelete">
+      <wsdl:input message="tns:dbCategoryDeleteSoapIn" />
+      <wsdl:output message="tns:dbCategoryDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitList">
+      <wsdl:input message="tns:dbUnitListSoapIn" />
+      <wsdl:output message="tns:dbUnitListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitUpdate">
+      <wsdl:input message="tns:dbUnitUpdateSoapIn" />
+      <wsdl:output message="tns:dbUnitUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitInsert">
+      <wsdl:input message="tns:dbUnitInsertSoapIn" />
+      <wsdl:output message="tns:dbUnitInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitDelete">
+      <wsdl:input message="tns:dbUnitDeleteSoapIn" />
+      <wsdl:output message="tns:dbUnitDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanList">
+      <wsdl:input message="tns:dbPlanListSoapIn" />
+      <wsdl:output message="tns:dbPlanListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanUpdate">
+      <wsdl:input message="tns:dbPlanUpdateSoapIn" />
+      <wsdl:output message="tns:dbPlanUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanInsert">
+      <wsdl:input message="tns:dbPlanInsertSoapIn" />
+      <wsdl:output message="tns:dbPlanInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanDelete">
+      <wsdl:input message="tns:dbPlanDeleteSoapIn" />
+      <wsdl:output message="tns:dbPlanDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbProductList">
+      <wsdl:input message="tns:dbProductListSoapIn" />
+      <wsdl:output message="tns:dbProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbProductUpdate">
+      <wsdl:input message="tns:dbProductUpdateSoapIn" />
+      <wsdl:output message="tns:dbProductUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbProductInsert">
+      <wsdl:input message="tns:dbProductInsertSoapIn" />
+      <wsdl:output message="tns:dbProductInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbProductDelete">
+      <wsdl:input message="tns:dbProductDeleteSoapIn" />
+      <wsdl:output message="tns:dbProductDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleList">
+      <wsdl:input message="tns:dbSaleListSoapIn" />
+      <wsdl:output message="tns:dbSaleListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleUpdate">
+      <wsdl:input message="tns:dbSaleUpdateSoapIn" />
+      <wsdl:output message="tns:dbSaleUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleInsert">
+      <wsdl:input message="tns:dbSaleInsertSoapIn" />
+      <wsdl:output message="tns:dbSaleInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleDelete">
+      <wsdl:input message="tns:dbSaleDeleteSoapIn" />
+      <wsdl:output message="tns:dbSaleDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbPaymentList">
+      <wsdl:input message="tns:dbPaymentListSoapIn" />
+      <wsdl:output message="tns:dbPaymentListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbRetailList">
+      <wsdl:input message="tns:dbRetailListSoapIn" />
+      <wsdl:output message="tns:dbRetailListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearList">
+      <wsdl:input message="tns:GetYearListSoapIn" />
+      <wsdl:output message="tns:GetYearListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalePlan">
+      <wsdl:input message="tns:GetSalePlanSoapIn" />
+      <wsdl:output message="tns:GetSalePlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrade">
+      <wsdl:input message="tns:GetTradeSoapIn" />
+      <wsdl:output message="tns:GetTradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradePayment">
+      <wsdl:input message="tns:GetTradePaymentSoapIn" />
+      <wsdl:output message="tns:GetTradePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRetail">
+      <wsdl:input message="tns:GetTradeRetailSoapIn" />
+      <wsdl:output message="tns:GetTradeRetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeStructure">
+      <wsdl:input message="tns:GetTradeStructureSoapIn" />
+      <wsdl:output message="tns:GetTradeStructureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRhytm">
+      <wsdl:input message="tns:GetTradeRhytmSoapIn" />
+      <wsdl:output message="tns:GetTradeRhytmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeSeason">
+      <wsdl:input message="tns:GetTradeSeasonSoapIn" />
+      <wsdl:output message="tns:GetTradeSeasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvgPrice">
+      <wsdl:input message="tns:GetAvgPriceSoapIn" />
+      <wsdl:output message="tns:GetAvgPriceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="taServiceSoap" type="tns:taServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dbCategoryList">
+      <soap:operation soapAction="http://tempuri.org/dbCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryUpdate">
+      <soap:operation soapAction="http://tempuri.org/dbCategoryUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryInsert">
+      <soap:operation soapAction="http://tempuri.org/dbCategoryInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryDelete">
+      <soap:operation soapAction="http://tempuri.org/dbCategoryDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitList">
+      <soap:operation soapAction="http://tempuri.org/dbUnitList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitUpdate">
+      <soap:operation soapAction="http://tempuri.org/dbUnitUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitInsert">
+      <soap:operation soapAction="http://tempuri.org/dbUnitInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitDelete">
+      <soap:operation soapAction="http://tempuri.org/dbUnitDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanList">
+      <soap:operation soapAction="http://tempuri.org/dbPlanList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanUpdate">
+      <soap:operation soapAction="http://tempuri.org/dbPlanUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanInsert">
+      <soap:operation soapAction="http://tempuri.org/dbPlanInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanDelete">
+      <soap:operation soapAction="http://tempuri.org/dbPlanDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductList">
+      <soap:operation soapAction="http://tempuri.org/dbProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductUpdate">
+      <soap:operation soapAction="http://tempuri.org/dbProductUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductInsert">
+      <soap:operation soapAction="http://tempuri.org/dbProductInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductDelete">
+      <soap:operation soapAction="http://tempuri.org/dbProductDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleList">
+      <soap:operation soapAction="http://tempuri.org/dbSaleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleUpdate">
+      <soap:operation soapAction="http://tempuri.org/dbSaleUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleInsert">
+      <soap:operation soapAction="http://tempuri.org/dbSaleInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleDelete">
+      <soap:operation soapAction="http://tempuri.org/dbSaleDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPaymentList">
+      <soap:operation soapAction="http://tempuri.org/dbPaymentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbRetailList">
+      <soap:operation soapAction="http://tempuri.org/dbRetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearList">
+      <soap:operation soapAction="http://tempuri.org/GetYearList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalePlan">
+      <soap:operation soapAction="http://tempuri.org/GetSalePlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrade">
+      <soap:operation soapAction="http://tempuri.org/GetTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradePayment">
+      <soap:operation soapAction="http://tempuri.org/GetTradePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRetail">
+      <soap:operation soapAction="http://tempuri.org/GetTradeRetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeStructure">
+      <soap:operation soapAction="http://tempuri.org/GetTradeStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRhytm">
+      <soap:operation soapAction="http://tempuri.org/GetTradeRhytm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeSeason">
+      <soap:operation soapAction="http://tempuri.org/GetTradeSeason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvgPrice">
+      <soap:operation soapAction="http://tempuri.org/GetAvgPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="taServiceSoap12" type="tns:taServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dbCategoryList">
+      <soap12:operation soapAction="http://tempuri.org/dbCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryUpdate">
+      <soap12:operation soapAction="http://tempuri.org/dbCategoryUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryInsert">
+      <soap12:operation soapAction="http://tempuri.org/dbCategoryInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbCategoryDelete">
+      <soap12:operation soapAction="http://tempuri.org/dbCategoryDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitList">
+      <soap12:operation soapAction="http://tempuri.org/dbUnitList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitUpdate">
+      <soap12:operation soapAction="http://tempuri.org/dbUnitUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitInsert">
+      <soap12:operation soapAction="http://tempuri.org/dbUnitInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUnitDelete">
+      <soap12:operation soapAction="http://tempuri.org/dbUnitDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanList">
+      <soap12:operation soapAction="http://tempuri.org/dbPlanList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanUpdate">
+      <soap12:operation soapAction="http://tempuri.org/dbPlanUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanInsert">
+      <soap12:operation soapAction="http://tempuri.org/dbPlanInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPlanDelete">
+      <soap12:operation soapAction="http://tempuri.org/dbPlanDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductList">
+      <soap12:operation soapAction="http://tempuri.org/dbProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductUpdate">
+      <soap12:operation soapAction="http://tempuri.org/dbProductUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductInsert">
+      <soap12:operation soapAction="http://tempuri.org/dbProductInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbProductDelete">
+      <soap12:operation soapAction="http://tempuri.org/dbProductDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleList">
+      <soap12:operation soapAction="http://tempuri.org/dbSaleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleUpdate">
+      <soap12:operation soapAction="http://tempuri.org/dbSaleUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleInsert">
+      <soap12:operation soapAction="http://tempuri.org/dbSaleInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbSaleDelete">
+      <soap12:operation soapAction="http://tempuri.org/dbSaleDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbPaymentList">
+      <soap12:operation soapAction="http://tempuri.org/dbPaymentList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbRetailList">
+      <soap12:operation soapAction="http://tempuri.org/dbRetailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearList">
+      <soap12:operation soapAction="http://tempuri.org/GetYearList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalePlan">
+      <soap12:operation soapAction="http://tempuri.org/GetSalePlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrade">
+      <soap12:operation soapAction="http://tempuri.org/GetTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradePayment">
+      <soap12:operation soapAction="http://tempuri.org/GetTradePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRetail">
+      <soap12:operation soapAction="http://tempuri.org/GetTradeRetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeStructure">
+      <soap12:operation soapAction="http://tempuri.org/GetTradeStructure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRhytm">
+      <soap12:operation soapAction="http://tempuri.org/GetTradeRhytm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeSeason">
+      <soap12:operation soapAction="http://tempuri.org/GetTradeSeason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvgPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetAvgPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="taService">
+    <wsdl:port name="taServiceSoap" binding="tns:taServiceSoap">
+      <soap:address location="http://localhost:49812/taService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="taServiceSoap12" binding="tns:taServiceSoap12">
+      <soap12:address location="http://localhost:49812/taService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
